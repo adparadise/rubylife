@@ -18,4 +18,16 @@ class Board
     end
     result
   end
+
+  def number_of_cells_around(x, y)
+    count = 0
+    coords = [[-1,-1],[0,-1],[1,-1],
+              [-1, 0],       [1, 0],
+              [-1, 1],[0, 1],[1, 1]]
+    coords.each do |coord|
+      count += 1 if get_cell_at(coord[0] + x, coord[1] + y)
+    end
+
+    count
+  end
 end

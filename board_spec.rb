@@ -28,6 +28,10 @@ describe Board do
     cell_2 = Cell.new 1,1
     cell_3 = Cell.new 1,9
 
+    board.add_cell (cell_1)
+    board.add_cell (cell_2)
+    board.add_cell (cell_3)
+
     expect(board.number_of_cells_around(0,1)).to eq(2)
   end
 
