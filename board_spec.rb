@@ -35,5 +35,13 @@ describe Board do
     expect(board.number_of_cells_around(0,1)).to eq(2)
   end
 
+  it "should remove a cell marked as dead" do
+    cell = Cell.new 1,2
+
+    board.add_cell (cell)
+    board.kill_cell(cell)
+
+    expect(board.get_cell_at(1, 2)).to eql(nil)
+  end
 end
 
