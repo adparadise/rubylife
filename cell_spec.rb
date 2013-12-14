@@ -9,3 +9,4 @@ describe Cell do
     expect(cell.y).to eql(30)
   end
 end
+
